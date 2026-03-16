@@ -5,36 +5,36 @@ using UnityEngine.UI;
 
 public class ChoiseManager : MonoBehaviour
 {
-    [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private string[] ChoiseTextCard;
+    [SerializeField] private int indexForHighligh;
+    [HideInInspector] public string[] ChoiseTextCard;
+    [HideInInspector] public Sprite changeImage;
     private float speedText;
     private Color color;
     private int indexChoise;
-    private LoadCharCard loadCharCard;
-    public Sprite changeImage;
+    private CardManager cardManager;
+    public Image image;
 
     void Start()
     {
-        loadCharCard = FindAnyObjectByType<LoadCharCard>();
-        image = loadCharCard._image;
-        indexChoise = loadCharCard._indexChoise;
+        cardManager = FindAnyObjectByType<CardManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.name == "CardImage")
         {
+            cardManager.zoneHighlight.Highlight();
+            cardManager.zoneHighlight.index = indexForHighligh;
             color = image.color;
             color.a = 0.9f;
             image.color = color;
+            
             text.alpha = 0.9f;
-
-            if (collision.name == "CardImage")
-            {
-                text.text = "";
-                StartCoroutine(TypeLine0());
-            }
+            
+            text.text = "";
+            StartCoroutine(TypeLine0());
+            
         }
     
     }
@@ -52,9 +52,12 @@ public class ChoiseManager : MonoBehaviour
     {
         if(collision.name == "CardImage")
         {
+            cardManager.zoneHighlight.ResetHighlight();
+
             color = image.color;
-            color.a = 0f;
+            color.a = 0.5f;
             image.color = color;
+
             text.alpha = 0f;
         }
     }

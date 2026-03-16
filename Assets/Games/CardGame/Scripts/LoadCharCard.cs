@@ -5,8 +5,10 @@ using UnityEngine.UI;
 public class LoadCharCard : MonoBehaviour
 {
     [SerializeField] private GameObject cardGame;
-    public Image _image;
-    public int _indexChoise;
+    public Sprite _imgSprite;
+    public Sprite[] _choiseImgSprite;
+    public string[] _choiseTextCard;
+    public Sprite[] _choiseZoneImgSprite;
     public event Action OnCharacteristicsChanged;
 
     void OnTriggerStay2D(Collider2D collision)
