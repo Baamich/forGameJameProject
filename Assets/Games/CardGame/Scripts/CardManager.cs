@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class CardManager : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    [SerializeField] private Image img;
+    [HideInInspector] public Sprite imgSprite;
+    [HideInInspector] public Sprite[] choiseImgSprite;
     private Canvas _mainCanvas;
     private RectTransform _rectTransform;
     private Vector2 _originalPosition;
     private CanvasGroup _canvasGroup;
-    private BoxTextManager BoxTextManager;    
-    private Sprite _changeCardImage;
-
+    private BoxTextManager BoxTextManager; 
+    public UIZoneHighlight zoneHighlight;
+       
     private void Awake()
     {
         if (BoxTextManager == null)
@@ -46,11 +50,13 @@ public class CardManager : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     {
         if (zoneName == "ChoiseVariantLeft")
         {
-            BoxTextManager.StartCoroutine(BoxTextManager.ChangeText(zoneId));  
+            BoxTextManager.StartCoroutine(BoxTextManager.ChangeText(zoneId));
+            img.sprite = choiseImgSprite[0];  
         }
         else if(zoneName == "ChoiseVariantRight")
             {
-                BoxTextManager.StartCoroutine(BoxTextManager.ChangeText(zoneId));  
+                BoxTextManager.StartCoroutine(BoxTextManager.ChangeText(zoneId));
+                img.sprite = choiseImgSprite[1];  
             }
     }
     
