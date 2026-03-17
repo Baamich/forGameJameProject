@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class ChoiseManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private int indexForHighligh;
-    [HideInInspector] public string[] ChoiseTextCard;
-    [HideInInspector] public Sprite changeImage;
-    private float speedText;
-    private Color color;
-    private int indexChoise;
-    private CardManager cardManager;
-    public Image image;
+    [SerializeField] private TextMeshProUGUI text; // текст выводимый в зоне
+    [SerializeField] private int indexForHighligh; // индекс зоны (0/1) в зависимости от кол-ва зон
+    [HideInInspector] public string[] ChoiseTextCard; // текст для ввода, который выводится в зоне
+    [HideInInspector] public Sprite changeImage; // спрайт для обновления UI обьекта
+    private float speedText; // скорость текста по дефолту 0
+    private Color color; // локальная переменная для цвета
+    private int indexChoise; // локальная переменная для текста
+    private CardManager cardManager; // скрипт 
+    public Image image; // наш обьект зоны
 
     void Start()
     {

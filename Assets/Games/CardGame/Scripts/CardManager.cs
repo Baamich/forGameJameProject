@@ -14,7 +14,6 @@ public class CardManager : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     private BoxTextManager BoxTextManager; 
     public UIZoneHighlight zoneHighlight;
        
-
     private void Awake()
     {
         if (BoxTextManager == null)

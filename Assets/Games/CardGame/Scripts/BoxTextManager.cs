@@ -1,14 +1,16 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class BoxTextManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private string[]lines;
-    private float speedText;
-    private int index;
-    public string _nameObj;
+    [SerializeField] private string[] lines; // текст который будет выводиться
+    private float speedText; // скорость текста по дефолту 0
+    private int index; // индекс для ввода текста по дефолту 0
+    public string _nameObj; // имя обьекта
+    public TextMeshProUGUI dialogueText; // текст который выводится в боксе
+    public Image backBoxGround; // фон бокса для текста
 
     private void Start()
     {
