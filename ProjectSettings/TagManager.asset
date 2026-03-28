@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3099057603
+    locked: 0
+  - name: VerticalBorder
+    uniqueID: 1085658861
+    locked: 0
+  - name: HorizontalBorder
+    uniqueID: 918091123
+    locked: 0
+  - name: road
+    uniqueID: 921850429
+    locked: 0
+  - name: BridgeFront
+    uniqueID: 1625056699
+    locked: 0
+  - name: DecorFront
+    uniqueID: 1694213343
+    locked: 0
+  - name: BorderMap
+    uniqueID: 1571127249
+    locked: 0
+  - name: eventsBack
+    uniqueID: 490602281
+    locked: 0
+  - name: gates
+    uniqueID: 3070037285
+    locked: 0
+  - name: forGates
+    uniqueID: 532200675
+    locked: 0
+  - name: Player
+    uniqueID: 1528192231
+    locked: 0
+  - name: BridgeBack
+    uniqueID: 3103267651
+    locked: 0
+  - name: Core
+    uniqueID: 1259143965
+    locked: 0
+  - name: Core2
+    uniqueID: 2068638231
+    locked: 0
+  - name: Core3
+    uniqueID: 4060132037
+    locked: 0
+  - name: Fense
+    uniqueID: 3064156059
+    locked: 0
+  - name: BushProps
+    uniqueID: 2877369739
+    locked: 0
+  - name: PropbsBehinBehindBehindProps
+    uniqueID: 559150261
+    locked: 0
+  - name: PropsBehindBehindProps
+    uniqueID: 1298084639
+    locked: 0
+  - name: PropsBehindProps
+    uniqueID: 109704303
+    locked: 0
+  - name: PropsBack
+    uniqueID: 1985824691
+    locked: 0
+  - name: FenseFrontFense
+    uniqueID: 3113766535
+    locked: 0
+  - name: DecorBack
+    uniqueID: 1746861765
+    locked: 0
+  - name: image
+    uniqueID: 2861592729
+    locked: 0
+  - name: imageclear
+    uniqueID: 681631959
+    locked: 0
+  - name: Events
+    uniqueID: 457323139
+    locked: 0
+  m_RenderingLayers:
+  - Default
